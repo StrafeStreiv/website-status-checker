@@ -61,3 +61,19 @@ website-status-checker/
 git clone https://github.com/your-username/website-status-checker.git
 cd website-status-checker
 
+# Website Status Checker
+
+Простое веб-приложение для мониторинга доступности сайтов с использованием .NET и PostgreSQL.
+
+---
+
+**2. Настройка базы данных**
+
+Создайте базу данных `WebsiteStatusDb` в вашем экземпляре PostgreSQL.
+
+Обновите строку подключения в файле `WebsiteStatusChecker/appsettings.json`:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Host=localhost;Port=5432;Database=WebsiteStatusDb;Username=your_username;Password=your_password"
+}
