@@ -67,7 +67,7 @@ cd website-status-checker
 
 ---
 
-### 2. Настройка базы данных
+2. Настройка базы данных
 Создайте базу данных WebsiteStatusDb в вашем PostgreSQL.
 
 Обновите строку подключения в файле WebsiteStatusChecker/appsettings.json:
