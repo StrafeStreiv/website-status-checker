@@ -1,5 +1,3 @@
-Вот отформатированный README.md с аккуратным Markdown:
-
 ````markdown
 # Website Status Checker
 
