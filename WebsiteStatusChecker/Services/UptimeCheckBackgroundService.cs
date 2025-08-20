@@ -15,7 +15,7 @@ namespace WebsiteStatusChecker.Services
         private readonly IServiceScopeFactory _scopeFactory;
         private readonly HttpClient _httpClient;
 
-        // Период проверки (например, раз в 5 минут)
+        // Период проверки 
         private readonly TimeSpan _period = TimeSpan.FromSeconds(30);
 
         public UptimeCheckBackgroundService(
@@ -62,7 +62,7 @@ namespace WebsiteStatusChecker.Services
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-                // Получаем ВСЕ сайты из базы данных
+                // Получаем  сайты из базы данных
                 var websites = await dbContext.Websites.ToListAsync();
 
                 _logger.LogInformation("Найдено {Count} сайтов для проверки.", websites.Count);
@@ -98,7 +98,7 @@ namespace WebsiteStatusChecker.Services
             }
         }
 
-        // Метод для проверки ОДНОГО сайта
+        // Метод для проверки  сайта
         private async Task<(int StatusCode, string? ResponseBodyTruncated, bool IsUp)> CheckSingleWebsite(string url)
         {
             try
